@@ -1,7 +1,7 @@
 SELECT areasymbol, musym, muname, mu.mukey  AS mukey, taxorder
 FROM legend  AS l
 INNER JOIN  mapunit AS mu ON mu.lkey = l.lkey
-AND l.areasymbol LIKE '""" + areaSym + """%'
+AND l.areasymbol LIKE '""" + param1 + """%'
 INNER JOIN component AS c ON c.mukey = mu.mukey
 AND c.cokey =
 	(SELECT TOP 1 c1.cokey FROM component AS c1
