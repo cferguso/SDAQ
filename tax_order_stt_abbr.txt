@@ -1,4 +1,4 @@
-SELECT areasymbol, musym, muname, mu.mukey  AS mukey, taxorder
+"""SELECT areasymbol, musym, muname, mu.mukey  AS mukey, taxorder
 FROM legend  AS l
 INNER JOIN  mapunit AS mu ON mu.lkey = l.lkey
 AND l.areasymbol LIKE '""" + param1 + """%'
