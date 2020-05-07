@@ -1,3 +1,4 @@
+--Tax_Order_Dom_Comp
 SELECT areasymbol, musym, muname, mu.mukey  AS mukey, taxorder
 FROM legend  AS l
 INNER JOIN  mapunit AS mu ON mu.lkey = l.lkey
