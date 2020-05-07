@@ -1,8 +1,8 @@
-"""SELECT areasymbol, musym, muname, mu.mukey  AS mukey, taxorder
+SELECT areasymbol, musym, muname, mu.mukey  AS mukey, taxorder
 FROM legend  AS l
 INNER JOIN  mapunit AS mu ON mu.lkey = l.lkey
-AND l.areasymbol LIKE '""" + param1 + """%'
+AND l.areasymbol LIKE 'param1%'
 INNER JOIN component AS c ON c.mukey = mu.mukey
 AND c.cokey =
 	(SELECT TOP 1 c1.cokey FROM component AS c1
-	INNER JOIN mapunit ON c.mukey=mapunit.mukey AND c1.mukey=mu.mukey ORDER BY c1.comppct_r DESC, c1.cokey)"""
+	INNER JOIN mapunit ON c.mukey=mapunit.mukey AND c1.mukey=mu.mukey ORDER BY c1.comppct_r DESC, c1.cokey)
